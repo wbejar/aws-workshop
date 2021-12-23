@@ -6,7 +6,7 @@ mkdir -p /var/www/conduit/static/
 cd /deploy/backend || exit 2
 pipenv install
 
-AWS_DEFAULT_REGION="$(curl -s http://169.254.169.254/latest/dynamic/instance-identity/document | jq -r .region)"
+AWS_DEFAULT_REGION="us-east-1"
 export AWS_DEFAULT_REGION
 
 DJANGO_SETTINGS_MODULE='conduit.settings.ec2'
